@@ -2,6 +2,7 @@ from selenium import webdriver  # Importa el controlador de Selenium
 from selenium.webdriver.common.keys import Keys  # Permite simular teclas del teclado
 from selenium.webdriver.common.by import By  # Usado para localizar elementos en la página
 import time  # Importa time para manejar pausas
+from concurrent.futures import ThreadPoolExecutor
 
 def initialize_driver():
     return webdriver.Chrome()
@@ -29,8 +30,8 @@ def main():
     
     submit = driver.find_element(By.XPATH, "/html/body/div/div/div[1]/div/div/div[3]/div/div/div[2]/div[2]/div[5]/div[2]/div/div/div[1]/div/label/span[1]/input") # Suposición: Segundo botón del array
     submit.click() # type: ignore
+    driver.quit()
     
-
-
 if __name__ == "__main__":
-    main()
+    for i in range(2000):
+        main()

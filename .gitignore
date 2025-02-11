@@ -1,0 +1,29 @@
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+
+# Entorno virtual
+venv/
+env/
+
+# Archivos de configuración del sistema
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Archivos de dependencias
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Archivos de compilación
+build/
+dist/
+*.egg-info/
+
+# Configuración de Jupyter Notebook (si usas)
+.ipynb_checkpoints/
+

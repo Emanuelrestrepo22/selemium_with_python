@@ -27,3 +27,4 @@ dist/
 # Configuración de Jupyter Notebook (si usas)
 .ipynb_checkpoints/
 
+.venv 
